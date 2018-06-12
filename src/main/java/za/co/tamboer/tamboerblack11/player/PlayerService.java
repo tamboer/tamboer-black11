@@ -1,7 +1,10 @@
 package za.co.tamboer.tamboerblack11.player;
 
+
 import org.springframework.stereotype.Service;
 import za.co.tamboer.tamboerblack11.player.persistence.PlayerRepository;
+import java.util.ArrayList;
+import java.util.List;
 
 @Service
 public class PlayerService {
@@ -32,4 +35,13 @@ public class PlayerService {
 
     }
 
+    public Player getPlayer(Long playerId) {
+        return playerRepository.findById(playerId).get();
+    }
+
+    public List<Player> getPlayers() {
+        List<Player> list = new ArrayList<>();
+        playerRepository.findAll().forEach(e -> list.add(e));
+        return list;
+    }
 }
