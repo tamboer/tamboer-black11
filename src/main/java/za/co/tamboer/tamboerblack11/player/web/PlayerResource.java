@@ -28,14 +28,14 @@ public class PlayerResource {
         super();
     }
     public PlayerResource(
-            Long id,
+            //Long id,
             @NotNull String username,
             @NotNull String email,
             @NotNull String name,
             String alias,
             @NotNull String gender,
             @NotNull Integer age) {
-        this.id = id;
+        //this.id = id;
         this.username = username;
         this.email = email;
         this.name = name;

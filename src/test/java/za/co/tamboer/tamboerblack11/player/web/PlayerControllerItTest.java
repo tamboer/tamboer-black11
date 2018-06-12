@@ -37,11 +37,12 @@ public class PlayerControllerItTest {
         headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
     }
 
-    @Test(expected = RuntimeException.class)
+    @Test
+    //@Test(expected = RuntimeException.class)
     public void createPlayer()  {
 
         PlayerResource playerResource = new PlayerResource(
-                1L,
+                //1L,
                 "Tom",
                 "tom@example.com",
                 "Tom Fool",
