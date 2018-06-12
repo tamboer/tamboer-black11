@@ -18,6 +18,8 @@ import za.co.tamboer.tamboerblack11.TamboerBlack11Application;
 
 import java.util.Arrays;
 
+import static org.junit.Assert.assertTrue;
+
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = TamboerBlack11Application.class,
         webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
@@ -35,8 +37,27 @@ public class PlayerControllerItTest {
         headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
     }
 
-    @Test
+    @Test(expected = RuntimeException.class)
     public void createPlayer()  {
+
+        PlayerResource playerResource = new PlayerResource(
+                1L,
+                "Tom",
+                "tom@example.com",
+                "Tom Fool",
+                "Tom",
+                "male",
+                55);
+
+        HttpEntity<PlayerResource> entity = new HttpEntity<PlayerResource>(playerResource, headers);
+
+        ResponseEntity<String> response = restTemplate.exchange(
+                createURLWithPort("/players"),
+                HttpMethod.POST, entity, String.class);
+
+        String actual = response.getHeaders().get(HttpHeaders.LOCATION).get(0);
+
+        assertTrue(actual.contains("/players"));
     }
 
     @Test
