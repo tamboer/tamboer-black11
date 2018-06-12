@@ -30,7 +30,7 @@ public class TamboerBlack11Application {
 			).forEach(name -> {
 				Player player = new Player();
 				player.setUsername(name.substring(0,3));
-				player.setEmail(name.substring(0,3) + "@example.com");
+				player.setEmail(name.substring(0,3).toLowerCase() + "@example.com");
 				player.setName(name);
 				player.setAlias(name.substring(0,3));
 				player.setGender("male");
