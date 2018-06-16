@@ -23,7 +23,7 @@ import static org.junit.Assert.assertTrue;
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = TamboerBlack11Application.class,
         webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-public class PlayerControllerItTest {
+public class PlayerControllerIT {
 
     @LocalServerPort
     private int port;

@@ -25,8 +25,8 @@ public class PlayerResource {
     private Integer age;
 
     public PlayerResource() {
-        super();
     }
+
     public PlayerResource(
             //Long id,
             @NotNull String username,
