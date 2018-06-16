@@ -24,26 +24,6 @@ public class PlayerResource {
     @NotNull
     private Integer age;
 
-    public PlayerResource() {
-    }
-
-    public PlayerResource(
-            //Long id,
-            @NotNull String username,
-            @NotNull String email,
-            @NotNull String name,
-            String alias,
-            @NotNull String gender,
-            @NotNull Integer age) {
-        //this.id = id;
-        this.username = username;
-        this.email = email;
-        this.name = name;
-        this.alias = alias;
-        this.gender = gender;
-        this.age = age;
-    }
-
     public Long getId() {
         return id;
     }

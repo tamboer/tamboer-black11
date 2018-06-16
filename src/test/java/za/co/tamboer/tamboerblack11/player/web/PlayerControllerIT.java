@@ -15,6 +15,7 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.junit4.SpringRunner;
 import za.co.tamboer.tamboerblack11.TamboerBlack11Application;
+import za.co.tamboer.tamboerblack11.player.fixtures.PlayerResouceFixture;
 
 import java.util.Arrays;
 
@@ -41,14 +42,7 @@ public class PlayerControllerIT {
     //@Test(expected = RuntimeException.class)
     public void createPlayer()  {
 
-        PlayerResource playerResource = new PlayerResource(
-                //1L,
-                "Tom",
-                "tom@example.com",
-                "Tom Fool",
-                "Tom",
-                "male",
-                55);
+        PlayerResource playerResource = PlayerResouceFixture.bob();
 
         HttpEntity<PlayerResource> entity = new HttpEntity<PlayerResource>(playerResource, headers);
 

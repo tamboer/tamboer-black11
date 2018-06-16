@@ -8,6 +8,8 @@ public class PlayerResourceReader {
 
         Player player = new Player();
         player.setId(resource.getId());
+        player.setUsername(resource.getUsername());
+        player.setEmail(resource.getEmail());
         player.setName(resource.getName());
         player.setAlias(resource.getAlias());
         player.setAge(resource.getAge());
