@@ -17,7 +17,22 @@ public class Player {
     private String alias;
     private Integer age;
     private String gender;
-    public Player() {
+
+        public Player() {
+    }
+
+    public Player(String username,
+                  String email,
+                  String name,
+                  String alias,
+                  Integer age,
+                  String gender) {
+        this.username = username;
+        this.email = email;
+        this.name = name;
+        this.alias = alias;
+        this.age = age;
+        this.gender = gender;
     }
 
     public Long getId() {
@@ -74,5 +89,18 @@ public class Player {
 
     public void setGender(String gender) {
         this.gender = gender;
+    }
+
+    @Override
+    public String toString() {
+        return "Player{" +
+                "id=" + id +
+                ", username='" + username + '\'' +
+                ", email='" + email + '\'' +
+                ", name='" + name + '\'' +
+                ", alias='" + alias + '\'' +
+                ", age=" + age +
+                ", gender='" + gender + '\'' +
+                '}';
     }
 }
