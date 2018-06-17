@@ -7,7 +7,7 @@ public class PlayerResouceFixture {
     public static PlayerResource bob() {
         PlayerResource playerResource = new PlayerResource();
         playerResource.setUsername("bob55");
-        playerResource.setEmail("bob@example.com");
+        playerResource.setEmail("bob55@example.com");
         playerResource.setName("Bob");
         playerResource.setAlias("Bobby");
         playerResource.setAge(55);

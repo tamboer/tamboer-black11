@@ -2,6 +2,7 @@ package za.co.tamboer.tamboerblack11;
 
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;
 import org.springframework.context.annotation.Bean;
@@ -10,8 +11,10 @@ import za.co.tamboer.tamboerblack11.player.persistence.PlayerRepository;
 
 import java.util.stream.Stream;
 
-//@SpringBootApplication
-@SpringBootApplication(exclude = { SecurityAutoConfiguration.class })
+@SpringBootApplication
+//@SpringBootApplication(exclude = { SecurityAutoConfiguration.class })
+@EnableAutoConfiguration(exclude = {
+		SecurityAutoConfiguration.class})
 public class TamboerBlack11Application {
 
 	public static void main(String[] args) {
