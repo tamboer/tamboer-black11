@@ -38,6 +38,10 @@ Establish a base config for Teltonika devices. Unfortunately the devices do not 
 - Set Authorized Number
 
 
+| First Header  | Second Header |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
 
 
 #### GSM Operators
